@@ -1,3 +1,139 @@
+:root {
+    --black: #050504;
+    --blue: #10275e;
+    --red: #db2d24;
+    --white: #fbf4e7;
+    --gray: #7E7E7E;
+    --super-gray: #E4E4E4;
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    --heading1-size: 53px;
+    --heading2-size: 43px;
+    --heading3-size: 33px;
+    --paragraph-size: 18px;
+}
+
 body {
-    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--black);
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.header {
+    display: flex;
+    font-family: var(--heading-font);
+    font-size: var(--paragraph-size);
+    margin-top: 21px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo {
+    flex-basis: auto;
+    margin-right: auto;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-flow: row wrap;
+    gap: 2rem;
+    font-weight: 500;
+}
+
+.header__button {
+    margin-left: auto;
+}
+
+.title__container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.page__title, .page__subtitle {
+    margin: 0;
+    padding: 0;
+}
+
+.page__title {
+    font-size: var(--heading1-size);
+    font-family: var(--heading-font);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page__subtitle {
+    font-size: var(--heading3-size);
+    font-family: var(--body-font);
+    font-weight: 400;
+}
+
+
+.img__container {
+    margin-bottom: 50px;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.posts__container {
+    margin-bottom: 50px;
+}
+
+.posts__heading {
+    font-size: var(--heading3-size);
+    font-family: var(--heading-font);
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.post__title {
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 22px;
+    margin-right: auto;
+}
+
+.post__date {
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.post__container {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--super-gray);
+}
+
+.footer {
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 0;
 }
