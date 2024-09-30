@@ -21,6 +21,7 @@
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     color: var(--black);
     font-size: var(--font-size-base);
     background-color: var(--white);
@@ -83,7 +84,6 @@ p {
     max-width: 982px;
     margin: 0 auto;
     color: var(--black);
-    min-height: 100vh;
     padding: 0 10px;
 }
 
@@ -288,4 +288,65 @@ img {
     font-size: 18px;
     text-align: center;
     padding: 20px 0;
+}
+
+.searchBar {
+    visibility: hidden;
+    transform: translateY(-100px);
+    background-color: var(--black);
+    padding: 4px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.searchBar .open {
+    transform: translateY(0);
+    transition: transform 0.2s;
+}
+
+.searchBar input {
+    margin: 0;
+    padding: 0;
+}
+
+.searchClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--super-gray);
+    padding: 15px;
+}
+
+/* Dashboard Admin */
+.admin-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-posts {
+    padding: 0;
+    margin: 0;
+}
+
+.admin-post-controls form {
+    display: inline-block;
+}
+
+.admin-post-controls .btn  {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--super-gray);
+    border: 0;
+    text-decoration: none;
+    font-size: .8rem;
+    padding: 4px 8px;
+    line-height: 2;
+}
+
+.admin-posts li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
 }
