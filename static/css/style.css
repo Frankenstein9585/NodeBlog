@@ -296,11 +296,12 @@ img {
     background-color: var(--black);
     padding: 4px 0;
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
 }
 
-.searchBar .open {
+.searchBar.open {
     transform: translateY(0);
     transition: transform 0.2s;
 }
@@ -310,7 +311,7 @@ img {
     padding: 0;
 }
 
-.searchClose {
+#searchClose {
     position: absolute;
     top: 0;
     right: 0;
