@@ -100,6 +100,7 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 21px;
+    margin-bottom: 21px;
     justify-content: center;
     align-items: center;
     font-family: var(--heading-font);
@@ -129,7 +130,7 @@ a:hover {
     padding: 10px;
 }
 
-.header__nav ul a:active {
+.header__nav ul a.active {
     color: var(--gray);
 }
 
@@ -345,6 +346,10 @@ img {
     padding: 4px 8px;
     line-height: 2;
 }
+
+/*.admin-post-controls .btn-delete {*/
+/*    background-color: var(--red);*/
+/*}*/
 
 .admin-posts li {
     display: flex;

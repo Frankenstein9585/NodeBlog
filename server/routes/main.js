@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/Post');
+const {locals} = require("express/lib/application");
 
 router.get('/', async (req, res) => {
     try {
@@ -24,7 +25,8 @@ router.get('/', async (req, res) => {
             locals,
             posts,
             current: page,
-            nextPage: hasnextPage ? nextPage : null
+            nextPage: hasnextPage ? nextPage : null,
+            currentRoute: '/'
         });
     } catch (error) {
         console.log(error);
@@ -38,7 +40,7 @@ router.get('/post/:id', async (req, res) => {
             title: post.title,
             description: "Simple Blog created with NodeJS, Express & MongoDB."
         }
-        res.render('post', { post, locals })
+        res.render('post', { post, locals, currentRoute: `/post/${req.params.id}` });
     } catch (error) {
         console.log(error);
     }
@@ -67,7 +69,7 @@ router.post('/search', async (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-    res.render('about');
+    res.render('about', { currentRoute: '/about' });
 });
 
 module.exports = router;
